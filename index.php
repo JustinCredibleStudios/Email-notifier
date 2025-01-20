@@ -19,7 +19,7 @@
         </form>
 
         <form id="not-full" action="not-full.php">
-            <input type="Submit" value="Not full">
+            <input type="Submit" value="Not full" >
         </form>
 
 
