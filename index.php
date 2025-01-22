@@ -1,29 +1,20 @@
-<!--This is going to be a test project for email notification project-->
-<!--Author: Justin Miller-->
-<!--Date: January 19, 2024-->
+<?php 
+// PHP MAILER APP 
+// Author: Justin S. Miller
+include 'config.php';
 
-<!DOCTYPE HTML>
+// Making Establishing Database Connection on this page
+$datbaseConnection = new mysqli($servername, $username, $password, $dbname);
 
-<html>
+// Making a basic query to verify that we are talking to the database
+$sql = "SELECT * FROM email_list";
+$results = $datbaseConnection->query($sql);
 
-    <head>
-        <title>PHP Mailer</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    </head>
-
-    <body>
-
-        <form id="full" action="full.php">
-            <input type="Submit" value="Full">
-        </form>
-
-        <form id="not-full" action="not-full.php">
-            <input type="Submit" value="Not full" >
-        </form>
+if ($results->num_rows > 0) {
+    $customers = $results -> fetch_all(MYSQLI_ASSOC);
+    print_r($customers);
+    
+}
 
 
-    </body>
-
-
-</html>
+?>
