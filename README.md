@@ -5,3 +5,9 @@
 
 ## CSS template
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
+## To-Do List
+
+    [] Get PHP Mailer Configured For the Application
+    [] Get the Application Sending out ONE email from the database
+    [] Get the Application to Loop through the database
